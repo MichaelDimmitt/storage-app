@@ -21,13 +21,21 @@ class UsersController < ApplicationController
   def edit
   end
 
-  # POST /users
+  # POST /users  
   # POST /users.json
   def create
     @user = User.new(user_params)
+    avatar = params[:user][:avatar]
+    documents = params[:user][:documents]
 
     respond_to do |format|
       if @user.save
+        if avatar
+          @user.avatar.attach(avatar)
+        end
+        if documents
+          @user.documents.attach(documents)
+        end
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
@@ -40,8 +48,17 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
+    avatar = params[:user][:avatar]
+    documents = params[:user][:documents]
+
     respond_to do |format|
       if @user.update(user_params)
+        if avatar
+          @user.avatar.attach(avatar)
+        end
+        if documents
+          @user.documents.attach(documents)
+        end
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else
