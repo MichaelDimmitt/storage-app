@@ -1,3 +1,12 @@
+## Overview
+This application is a vanilla implementation of Active Storage in rails 6.3
+
+ActiveStorage is the recommended library for uploading images and files to a server or cloud server.
+<br/>Before ActiveStorage a project called PaperClip was the recommended file manager.
+<br/>None of the code in this project was ported from a PaperClip project instead this project is built from scratch using `rails new`.
+
+Do check out the commits as they are a good walkthrough on setting up ActiveStorage
+
 ## Install instructions
 You will need to ask me for the master key for this application 
 <br/>to gain access to the aws bucket.
