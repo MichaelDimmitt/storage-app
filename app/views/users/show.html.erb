@@ -5,5 +5,18 @@
   <%= @user.name %>
 </p>
 
+<p>
+  <%= image_tag(url_for(@user.avatar)) %>
+<p>
+
+<p>
+  <strong>Documents:</strong>
+  <ul>
+    <% @user.documents.each do |document| %>
+      <li><%= link_to document.blob.filename, url_for(document) %></li>
+    <% end %>
+  </ul>
+<p>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
