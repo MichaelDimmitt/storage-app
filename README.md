@@ -1,24 +1,22 @@
-# README
+## Install instructions
+You will need to ask me for the master key for this application 
+<br/>to gain access to the aws bucket.
+```bash
+git clone https://github.com/MichaelDimmitt/storageapp.git
+cd storageapp
+rails s
+```
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Order in which things are added to the project
+1) ActiveStorage image uploading to an aws s3 bucket
+2) Authenticaion (maybe simple solution or devise + omniauth.)
+3) 
 
-Things you may want to cover:
+## Scaffold commands:
+rails new storageapp
+rails g resource comment content:text
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Additional useful commands:
+bin/rails active_storage:install
+bin/rails active_storage:install:migrations
+bin/rails db:migrate
