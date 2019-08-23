@@ -8,6 +8,11 @@ ActiveStorage is the recommended library for uploading images and files to a ser
 Do check out the commits as they are a good walkthrough on setting up ActiveStorage
 
 ## Install instructions
+How to easily install ruby and rails: (put the following in your terminal)
+```bash
+\curl -sSL https://get.rvm.io | bash -s stable --rails
+```
+
 You will need to ask me for the master key for this application 
 <br/>to gain access to the aws bucket.
 <br/>If you do not have the master.key you can find the example file here:
